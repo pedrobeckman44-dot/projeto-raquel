@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ainda é você.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="studio-intro" id="studioIntro">
+    <div class="studio-text text-a">Algumas histórias nunca realmente terminam.</div>
+    <div class="studio-text text-b">15 de Junho.</div>
+    <div class="studio-text text-c">Para Raquel.</div>
+  </div>
+
+  <div class="stars"></div>
+  <div class="cinema-noise"></div>
+  <div class="rain-glass"></div>
+  <div class="petals" id="petals"></div>
+  <div class="magic-cursor" id="magicCursor"></div>
+
+  <button class="sound-toggle" id="soundToggle">♪</button>
+
+  <div class="floating-text text1">Você é minha alma gêmea.</div>
+  <div class="floating-text text2">Ainda é você.</div>
+  <div class="floating-text text3">Meu maior amor.</div>
+  <div class="floating-text text4">Você foi minha melhor amiga.</div>
+
+  <div class="floating-img img1"><img src="decor/onepiece.png" alt=""></div>
+  <div class="floating-img img2"><img src="decor/heart.png" alt=""></div>
+  <div class="floating-img img3"><img src="decor/chopper.png" alt=""></div>
+  <div class="floating-img img4"><img src="decor/rose.png" alt=""></div>
+  <div class="floating-img img5"><img src="decor/sun.png" alt=""></div>
+  <div class="floating-img img6"><img src="decor/wine.png" alt=""></div>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="birthday">15 de Junho</p>
+
+      <h1>Feliz aniversário, Raquel.</h1>
+
+      <p class="subtitle">
+        Algumas pessoas passam pela nossa vida.<br>
+        Outras se tornam parte da nossa alma.
+      </p>
+
+      <button id="startBtn" onclick="startExperience()">Reviver</button>
+    </div>
+  </section>
+
+  <main id="story">
+
+    <section class="time-counter">
+      <p>Desde 07 de abril de 2023</p>
+      <h2 id="daysCounter">0</h2>
+      <span>dias desde que você mudou minha vida.</span>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-content">
+        <span>Capítulo 1</span>
+        <h2>O tapa que mudou tudo.</h2>
+
+        <p>
+Tudo começou de um jeito estranho.
+Um tapa.
+Um orgulho ferido.
+Um píer silencioso.
+
+E ironicamente...
+foi ali que começou a maior história da minha vida.
+        </p>
+
+        <div class="memory-photo">
+          <img src="fotos/momento1.jpg" alt="Nossa memória">
+        </div>
+      </div>
+    </section>
+
+    <section class="transition-scene">
+      <p>Algumas pessoas entram na nossa vida...</p>
+      <h2>e nunca mais saem.</h2>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-content">
+        <span>Capítulo 2</span>
+        <h2>Nós contra o mundo.</h2>
+
+        <p>
+Entre praias, estrelas,
+viagens e fumaça no ar,
+eu descobri que qualquer lugar
+parecia casa ao seu lado.
+        </p>
+
+        <div class="travel-gallery">
+          <img src="fotos/viagem1.jpg" alt="">
+          <img src="fotos/viagem2.jpg" alt="">
+          <img src="fotos/viagem3.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="onepiece-chapter">
+      <div class="op-sky"></div>
+      <div class="op-moon"></div>
+      <div class="op-gold"></div>
+
+      <div class="going-merry">
+        <img src="decor/goingmerry.png" alt="Going Merry">
+      </div>
+
+      <div class="op-content">
+        <span>Capítulo Especial</span>
+        <h2>Companheiros de jornada.</h2>
+
+        <div class="op-lines">
+          <p>Algumas pessoas não entram na nossa vida.</p>
+          <p>Elas embarcam nela.</p>
+          <p>E algumas tripulações… nunca realmente se desfazem.</p>
+        </div>
+      </div>
+
+      <div class="op-ocean">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+      </div>
+    </section>
+
+    <section class="memory-rain">
+      <h2>Chuva de memórias</h2>
+
+      <div class="rain-photo"><img src="fotos/mem1.jpg" alt=""></div>
+      <div class="rain-photo"><img src="fotos/mem2.jpg" alt=""></div>
+      <div class="rain-photo"><img src="fotos/mem3.jpg" alt=""></div>
+      <div class="rain-photo"><img src="fotos/mem4.jpg" alt=""></div>
+      <div class="rain-photo"><img src="fotos/mem5.jpg" alt=""></div>
+      <div class="rain-photo"><img src="fotos/mem6.jpg" alt=""></div>
+      <div class="rain-photo"><img src="fotos/mem7.jpg" alt=""></div>
+      <div class="rain-photo"><img src="fotos/mem8.jpg" alt=""></div>
+    </section>
+<section class="playlist-section">
+  <div class="lyric-rain" id="lyricRain"></div>
+
+  <div class="smoke smoke1"></div>
+  <div class="smoke smoke2"></div>
+  <div class="smoke smoke3"></div>
+
+  <div class="playlist-content">
+    <span>uma playlist pra você</span>
+
+    <h2>Eu escolhi música por música.</h2>
+
+    <p>
+      Não foi qualquer playlist.<br>
+      Tem música que parece saudade.<br>
+      Tem música que parece tua risada.<br>
+      Tem música que me lembram você.
+    </p>
+
+    <a 
+      class="playlist-button"
+      href="https://open.spotify.com/playlist/7gWDhsnVZGNgh9YUF7qB6h?si=772576fca79441da"
+      target="_blank"
+    >
+      abrir nossa playlist
+    </a>
+<section class="varanda-live">
+  <div class="varanda-glow"></div>
+  <div class="varanda-stars"></div>
+  <div class="varanda-smoke"></div>
+  <div class="varanda-smoke smoke-b"></div>
+  <div class="varanda-smoke smoke-c"></div>
+
+  <div class="varanda-photo">
+    <img src="fotos/raquel-varanda.jpeg" alt="Raquel na varanda">
+  </div>
+</section>
+
+</section>
+    <section class="transition-scene">
+      <p>Entre tantos caminhos...</p>
+      <h2>eu ainda reconheço o seu.</h2>
+    </section>
+
+    <section class="chapter special">
+      <div class="chapter-content">
+        <span>Capítulo 3</span>
+        <h2>Ainda é você.</h2>
+
+        <p>
+Talvez a vida tenha colocado quilômetros entre nós.
+
+Mas nunca conseguiu apagar você de mim.
+
+Porque algumas pessoas não passam.
+Permanecem.
+        </p>
+      </div>
+    </section>
+
+    <section class="constellation-section">
+      <canvas id="loveConstellation"></canvas>
+
+      <div class="constellation-content">
+        <h2>algumas conexões continuam brilhando.</h2>
+      </div>
+    </section>
+
+    <section class="final-content">
+     
+
+      <p id="typedLetter"></p>
+
+    </section>
+
+  </main>
+
+  <audio id="music" loop>
+    <source src="musicas/musica.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="script.js"></script>
+  <section class="carta-final-section" id="carta-final">
+  <div class="carta-intro">
+    <p>Se você chegou até aqui...</p>
+    <h2>Existe uma última coisa que eu preciso te dizer.</h2>
+    <button onclick="abrirCarta()">Abrir carta</button>
+  </div>
+
+  <div class="carta-final" id="cartaFinal">
+   <h2>Para Maria Raquel ❤️</h2>
+
+<p>Então...</p>
+
+<p>Feliz aniversário, Maria Raquel.</p>
+
+<p>Espero, de todo o coração, que tenha gostado deste presente.</p>
+
+<p>Eu me dediquei ao máximo para criar algo especial para você. E, na verdade, este nunca foi apenas um simples site na internet. É uma pequena parte de mim transformada em palavras, memórias e sentimentos. Um presente feito para a pessoa que eu amo.</p>
+
+<p>Quis criar algo que pudesse permanecer no tempo, como uma forma de eternizar as lembranças mais bonitas que vivemos juntos. Uma homenagem à nossa história, ao amor que construímos, às risadas que compartilhamos, aos momentos difíceis que enfrentamos e a tudo aquilo que fez parte de nós.</p>
+
+<p>Porque, depois de tudo, foi ao seu lado que eu aprendi o que realmente significa amar.</p>
+
+<p>Aprendi que o amor também é saudade.</p>
+
+<p>É encontrar alguém nas coisas mais simples.</p>
+
+<p>Em uma música que toca sem aviso.</p>
+
+<p>Em uma palavra perdida no meio de uma conversa.</p>
+
+<p>Em um filme.</p>
+
+<p>Em uma paisagem.</p>
+
+<p>Em um fim de tarde qualquer.</p>
+
+<p>É perceber que tudo aquilo que carrega um pouco de beleza acaba, de alguma forma, me levando até você.</p>
+
+<p>Você talvez nem imagine, mas continua me inspirando todos os dias.</p>
+
+<p>Me inspira a ser um homem melhor.</p>
+
+<p>A crescer.</p>
+
+<p>A amadurecer.</p>
+
+<p>A me tornar alguém que não apenas ame você, mas que também seja capaz de apoiar seus sonhos, segurar sua mão nos momentos difíceis e admirar a mulher incrível que você está se tornando.</p>
+
+<p>Você tem um futuro brilhante, Maria Raquel.</p>
+
+<p>Eu consigo enxergar isso.</p>
+
+<p>Consigo enxergar sua força, sua inteligência, sua bondade e tudo aquilo que faz de você alguém tão especial.</p>
+
+<p>E mesmo que, por acaso, eu não faça parte desse futuro, quero que saiba que continuo torcendo por você.</p>
+
+<p>Todos os dias.</p>
+
+<p>Em minhas orações.</p>
+
+<p>Nos meus pensamentos.</p>
+
+<p>No silêncio das coisas que ninguém vê.</p>
+
+<p>Eu peço a Deus que te conduza para a vida que você sonha, para a pessoa que deseja se tornar e para toda a felicidade que você merece encontrar.</p>
+
+<p>Eu te amo muito.</p>
+
+<p>E não sei como foi para você, mas para mim foi difícil.</p>
+
+<p>Porque você não era apenas minha namorada.</p>
+
+<p>Você era minha melhor amiga.</p>
+
+<p>A pessoa com quem eu podia ser eu mesmo.</p>
+
+<p>Sem máscaras.</p>
+
+<p>Sem medo.</p>
+
+<p>Sem precisar esconder meus sentimentos.</p>
+
+<p>Você era a pessoa para quem eu queria contar as coisas boas e as ruins.</p>
+
+<p>A pessoa com quem eu queria dividir minhas vitórias, meus medos, meus sonhos e minha vida.</p>
+
+<p>Você era tudo para mim.</p>
+<h2>Capítulo II</h2>
+
+<p>Mas o tempo...</p>
+
+<p>O tempo governa todas as coisas.</p>
+
+<p>Ele molda impérios e os transforma em ruínas.</p>
+
+<p>Aproxima caminhos e separa destinos.</p>
+
+<p>Escreve histórias que ninguém poderia prever.</p>
+
+<p>E a distância fez parte da nossa história.</p>
+
+<p>Esse tempo longe muda muita coisa.</p>
+
+<p>Muda pessoas.</p>
+
+<p>Muda pensamentos.</p>
+
+<p>Muda ideias.</p>
+
+<p>Muda sentimentos.</p>
+
+<p>Mas existe algo dentro de mim que permaneceu exatamente igual.</p>
+
+<p>O amor que sinto por você.</p>
+
+<p>Talvez você já não sinta o mesmo.</p>
+
+<p>Talvez seu coração tenha seguido outros caminhos.</p>
+
+<p>E eu respeito isso.</p>
+
+<p>Mas quero que saiba que aquilo que você representa para mim nunca mudou.</p>
+
+<p>Porque você foi minha parceira.</p>
+
+<p>Minha melhor amiga.</p>
+
+<p>Meu primeiro amor.</p>
+
+<p>E uma das pessoas mais importantes que já passaram pela minha vida.</p>
+
+<p>E se existe algo que eu aprendi com tudo isso, é que o amor verdadeiro não desaparece apenas porque o tempo passou.</p>
+
+<p>Ele se transforma em carinho.</p>
+
+<p>Em admiração.</p>
+
+<p>Em gratidão.</p>
+
+<p>Em memórias que continuam aquecendo o coração mesmo quando os dias mudam.</p>
+
+<p>E sabe...</p>
+
+<p>Existe apenas uma coisa que eu gostaria de saber de você.</p>
+
+<p>Talvez seja a única pergunta que o tempo nunca conseguiu responder por mim.</p>
+
+<p>O que ainda existe dentro do seu coração quando pensa em nós?</p>
+
+<p>Quando olha para a nossa história, você enxerga algo que ainda poderia existir no futuro? Ou acredita que fomos apenas uma bonita história de adolescência, um capítulo que cumpriu seu propósito e ficou para trás?</p>
+
+<p>Não existe resposta certa ou errada.</p>
+
+<p>Eu só preciso da verdade.</p>
+
+<p>Porque durante todo esse tempo, muitos dos meus sonhos carregaram você dentro deles. Em cada plano para o futuro, em cada objetivo que tracei, existia uma parte de mim acreditando que, em algum momento, nossos caminhos poderiam se encontrar novamente.</p>
+
+<p>Hoje nós não somos mais aqueles adolescentes.</p>
+
+<p>A vida nos mudou.</p>
+
+<p>O tempo nos transformou.</p>
+
+<p>Mas aquilo que eu sentia nunca deixou de ser verdadeiro.</p>
+
+<p>Eu ainda olho para você e vejo alguém com quem eu construiria uma vida inteira.</p>
+
+<p>Alguém por quem eu atravessaria distâncias, enfrentaria dificuldades e faria todos os esforços possíveis para estar ao lado.</p>
+
+<p>Não porque preciso de você para ser feliz.</p>
+
+<p>Mas porque, se existisse uma escolha do meu coração, ela continuaria sendo você.</p>
+
+<p>E se, em algum lugar dentro de você, ainda existir a vontade de tentar, de construir algo novo a partir de tudo o que fomos, quero que saiba que eu teria coragem de ir atrás disso com todas as minhas forças.</p>
+
+<p>Mas, se o seu coração escolheu outro caminho, eu também vou entender.</p>
+
+<p>Vou respeitar.</p>
+
+<p>Vou aceitar.</p>
+
+<p>Porque amar alguém também é respeitar as escolhas dessa pessoa.</p>
+
+<p>Só não quero viver preso a perguntas que apenas você pode responder.</p>
+
+<p>Por isso, acima de qualquer resposta, eu só gostaria de conhecer a verdade.</p>
+
+<p>E seja ela qual for, eu sempre vou guardar nossa história com carinho.</p>
+
+<p>Porque você foi, e sempre será, uma das partes mais bonitas da minha vida.</p>
+<h2>Capítulo III</h2>
+
+<p>E, acima de tudo, quero que você seja feliz.</p>
+
+<p>Que a vida te abrace com a mesma delicadeza que você merece.</p>
+
+<p>Que seus sonhos encontrem caminhos.</p>
+
+<p>Que seus medos encontrem descanso.</p>
+
+<p>Que você nunca deixe de acreditar na pessoa incrível que é.</p>
+
+<p>Talvez o tempo tenha mudado muitas coisas.</p>
+
+<p>Talvez ainda mude outras tantas.</p>
+
+<p>Mas existe uma verdade que ele nunca conseguiu levar embora: o carinho, a admiração e o amor que sempre vou sentir por você.</p>
+
+<p>Porque algumas pessoas passam pela nossa vida.</p>
+
+<p>Outras deixam marcas.</p>
+
+<p>Mas existem aquelas raras que se tornam parte da nossa história para sempre.</p>
+
+<p>Você é uma delas.</p>
+
+<p>E independentemente de onde a vida nos levar daqui para frente, sempre vou agradecer por cada risada, cada conversa, cada abraço, cada momento e cada lembrança que construímos juntos.</p>
+
+<p>Obrigado por ter existido na minha vida.</p>
+
+<p>Obrigado por ter sido meu porto seguro quando eu precisava.</p>
+
+<p>Obrigado por ter me ensinado, mesmo sem perceber, o que é amar alguém de verdade.</p>
+
+<p>E se um dia, muitos anos no futuro, nossos caminhos se cruzarem novamente, espero que possamos olhar para trás e sorrir ao lembrar da história bonita que escrevemos.</p>
+
+<p>Mas hoje não é dia de falar sobre despedidas.</p>
+
+<p>Hoje é dia de celebrar você.</p>
+
+<p>A menina que se tornou uma mulher incrível.</p>
+
+<p>A pessoa que eu admiro.</p>
+
+<p>A pessoa que eu amo.</p>
+
+<p>Então sorria.</p>
+
+<p>Aproveite seu dia.</p>
+
+<p>Faça pedidos.</p>
+
+<p>Colecione memórias.</p>
+
+<p>Viva intensamente.</p>
+
+<p>E nunca se esqueça do quanto você é especial.</p>
+
+<h3>Feliz aniversário, Maria Raquel.</h3>
+
+<p>Que este novo ciclo seja tão bonito quanto o brilho que você carrega dentro de si.</p>
+
+<p>E que, aconteça o que acontecer, exista uma coisa que o tempo jamais será capaz de apagar:</p>
+
+<p>Você foi o meu primeiro amor.</p>
+
+<p>Minha melhor amiga.</p>
+
+<p>Meu lar nos dias difíceis.</p>
+
+<p>E uma das histórias mais bonitas que Deus escreveu na minha vida.</p>
+
+<div class="assinatura">
+
+  <p>Com todo o amor do meu coração.</p>
+
+  <p>Para sempre,</p>
+
+  <h2>Pedro ❤️</h2>
+
+</div>
+</div>
+  </div>
+</section>
+</body>
+</html>
