@@ -395,6 +395,7 @@ function createLyricDrop() {
 
 setInterval(createLyricDrop, 900);
 function abrirCarta() {
+  trocarParaMusicaFinal();
   const carta = document.getElementById("cartaFinal");
   const intro = document.querySelector(".carta-intro");
   const paragrafos = document.querySelectorAll(".carta-final p");
@@ -424,3 +425,44 @@ const memoryObserver = new IntersectionObserver((entries) => {
 fotosMemorias.forEach(foto => {
   memoryObserver.observe(foto);
 });
+function trocarParaMusicaFinal() {
+  const musicaPrincipal = document.getElementById("music");
+  const musicaFinal = document.getElementById("musicaFinal");
+
+  if (!musicaFinal) return;
+
+  if (!musicaPrincipal || musicaPrincipal.paused) {
+    musicaFinal.volume = 0.7;
+    musicaFinal.play();
+    return;
+  }
+
+  let volume = musicaPrincipal.volume || 0.7;
+
+  const fadeOut = setInterval(() => {
+    volume -= 0.05;
+
+    if (volume <= 0) {
+      clearInterval(fadeOut);
+
+      musicaPrincipal.pause();
+      musicaPrincipal.currentTime = 0;
+
+      musicaFinal.volume = 0;
+      musicaFinal.play();
+
+      let volumeFinal = 0;
+
+      const fadeIn = setInterval(() => {
+        volumeFinal += 0.05;
+        musicaFinal.volume = Math.min(volumeFinal, 0.75);
+
+        if (volumeFinal >= 0.75) {
+          clearInterval(fadeIn);
+        }
+      }, 180);
+    } else {
+      musicaPrincipal.volume = volume;
+    }
+  }, 180);
+}
