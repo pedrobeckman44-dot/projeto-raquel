@@ -409,4 +409,18 @@ function abrirCarta() {
       p.classList.add("aparecer");
     }, index * 450);
   });
-}
+}const fotosMemorias = document.querySelectorAll('.rain-photo');
+
+const memoryObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show-memory');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+fotosMemorias.forEach(foto => {
+  memoryObserver.observe(foto);
+});
