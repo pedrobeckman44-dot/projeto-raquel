@@ -1221,3 +1221,179 @@ main {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+/* CHUVA DE MEMÓRIAS — VERSÃO CINEMA FINAL */
+
+.memory-rain {
+  padding: 90px 18px !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 28px !important;
+  justify-items: center !important;
+  overflow: visible !important;
+}
+
+.rain-photo {
+  width: 135px !important;
+  height: 185px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 22px !important;
+  opacity: 1 !important;
+  display: block !important;
+  animation: flutuarMemoria 5s ease-in-out infinite !important;
+  box-shadow:
+    0 12px 25px rgba(0,0,0,0.45),
+    0 0 25px rgba(255,150,220,0.35) !important;
+  transition: 0.5s ease !important;
+}
+
+.rain-photo:nth-child(odd) {
+  transform: rotate(-4deg) !important;
+}
+
+.rain-photo:nth-child(even) {
+  transform: rotate(4deg) !important;
+}
+
+.rain-photo:nth-child(3n) {
+  transform: rotate(-7deg) !important;
+}
+
+.rain-photo:nth-child(5n) {
+  transform: rotate(6deg) !important;
+}
+
+.rain-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 22px !important;
+  display: block !important;
+  filter: contrast(1.08) saturate(1.15) brightness(0.95) !important;
+}
+
+.rain-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    130deg,
+    rgba(255,255,255,0.35),
+    transparent 35%,
+    rgba(255,120,200,0.18)
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.rain-photo::after {
+  content: "♡";
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  color: rgba(255,255,255,0.75);
+  font-size: 1.3rem;
+  z-index: 3;
+}
+
+.rain-photo:hover {
+  transform: scale(1.08) rotate(0deg) !important;
+  box-shadow:
+    0 16px 35px rgba(0,0,0,0.55),
+    0 0 45px rgba(255,150,220,0.6) !important;
+}
+
+@keyframes flutuarMemoria {
+  0%, 100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -10px;
+  }
+}
+/* CHUVA DE MEMÓRIAS — ORGANIZADA MAS COM CARA DE MEMÓRIA */
+.memory-rain {
+  padding: 100px 18px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 26px 34px !important;
+  overflow: visible !important;
+}
+
+.memory-rain h2 {
+  width: 100% !important;
+  text-align: center !important;
+  margin-bottom: 40px !important;
+}
+
+.rain-photo {
+  width: 135px !important;
+  height: 185px !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  opacity: 1 !important;
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.55),
+    0 0 30px rgba(255,120,210,.35) !important;
+  animation: memoriaFlutua 5s ease-in-out infinite !important;
+}
+
+.rain-photo:nth-child(2n) {
+  transform: translateY(30px) rotate(4deg) !important;
+}
+
+.rain-photo:nth-child(3n) {
+  transform: translateY(-10px) rotate(-5deg) !important;
+}
+
+.rain-photo:nth-child(4n) {
+  transform: translateY(55px) rotate(2deg) !important;
+}
+
+.rain-photo:nth-child(5n) {
+  transform: translateY(15px) rotate(-7deg) !important;
+}
+
+.rain-photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 24px !important;
+}
+
+.rain-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    140deg,
+    rgba(255,255,255,.25),
+    transparent 40%,
+    rgba(255,100,210,.18)
+  );
+  pointer-events: none;
+}
+
+@keyframes memoriaFlutua {
+  0%, 100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .memory-rain {
+    gap: 26px 24px !important;
+  }
+
+  .rain-photo {
+    width: 135px !important;
+    height: 185px !important;
+  }
+}
