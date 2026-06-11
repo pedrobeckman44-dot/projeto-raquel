@@ -1092,3 +1092,49 @@ main {
   margin-top: 20px;
   font-size: 2.8rem;
 }
+@media (max-width: 768px) {
+  .playlist,
+  .playlist-section,
+  .music-section {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .playlist h1,
+  .playlist h2,
+  .playlist-section h1,
+  .playlist-section h2,
+  .music-section h1,
+  .music-section h2 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    line-height: 1.15;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+  .playlist p,
+  .playlist-section p,
+  .music-section p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .playlist img,
+  .playlist-section img,
+  .music-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
