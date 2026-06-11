@@ -466,8 +466,6 @@ function trocarParaMusicaFinal() {
     }
   }, 180);
 }
-const musicaFinal = document.getElementById("musicaFinal");
-const musicaFinal2 = document.getElementById("musicaFinal2");
 
 if (musicaFinal && musicaFinal2) {
   musicaFinal.addEventListener("ended", () => {
@@ -486,3 +484,22 @@ if (musicaFinal && musicaFinal2) {
     }, 200);
   });
 }
+function prepararSegundaMusicaFinal() {
+  const musicaFinal = document.getElementById("musicaFinal");
+  const musicaFinal2 = document.getElementById("musicaFinal2");
+
+  if (!musicaFinal || !musicaFinal2) return;
+
+  musicaFinal2.load();
+
+  musicaFinal.onended = () => {
+    musicaFinal2.currentTime = 0;
+    musicaFinal2.volume = 0.7;
+
+    musicaFinal2.play().catch((erro) => {
+      console.log("A segunda música não tocou:", erro);
+    });
+  };
+}
+
+prepararSegundaMusicaFinal();
