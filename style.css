@@ -1397,3 +1397,70 @@ main {
     height: 185px !important;
   }
 }
+/* PLAYLIST — MOBILE CINEMA */
+.playlist-section {
+  overflow: hidden !important;
+  padding: 90px 20px !important;
+  text-align: center !important;
+}
+
+.playlist-section h2 {
+  font-size: clamp(2.1rem, 9vw, 4.5rem) !important;
+  line-height: 1.12 !important;
+  max-width: 100% !important;
+  margin: 0 auto 28px !important;
+  text-align: center !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+}
+
+.playlist-section .subtitle,
+.playlist-section p {
+  font-size: clamp(1rem, 4.5vw, 1.4rem) !important;
+  line-height: 1.7 !important;
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.playlist-section a,
+.playlist-section button,
+.playlist-btn {
+  max-width: 90% !important;
+  width: 100% !important;
+  padding: 18px 22px !important;
+  font-size: 1.1rem !important;
+  border-radius: 999px !important;
+  margin: 32px auto 45px !important;
+  display: block !important;
+}
+
+.playlist-section img,
+.playlist-image img,
+.playlist-cover {
+  width: 100% !important;
+  max-width: 620px !important;
+  height: auto !important;
+  border-radius: 28px !important;
+  display: block !important;
+  margin: 0 auto !important;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.55),
+    0 0 45px rgba(255,120,220,.18) !important;
+}
+
+@media (max-width: 768px) {
+  .playlist-section {
+    padding: 80px 16px !important;
+  }
+
+  .playlist-section h2 {
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+  }
+
+  .playlist-section img,
+  .playlist-image img,
+  .playlist-cover {
+    max-width: 100% !important;
+  }
+}
