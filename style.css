@@ -1338,7 +1338,7 @@ main {
   box-shadow:
     0 12px 30px rgba(0,0,0,.55),
     0 0 30px rgba(255,120,210,.35) !important;
-  animation: memoriaFlutua 5s ease-in-out infinite !important;
+  animation: none !important;
 }
 
 .rain-photo:nth-child(2n) {
@@ -1376,15 +1376,6 @@ main {
     rgba(255,100,210,.18)
   );
   pointer-events: none;
-}
-
-@keyframes memoriaFlutua {
-  0%, 100% {
-    margin-top: 0;
-  }
-  50% {
-    margin-top: -12px;
-  }
 }
 
 @media (max-width: 768px) {
