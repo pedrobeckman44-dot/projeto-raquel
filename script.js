@@ -466,3 +466,23 @@ function trocarParaMusicaFinal() {
     }
   }, 180);
 }
+const musicaFinal = document.getElementById("musicaFinal");
+const musicaFinal2 = document.getElementById("musicaFinal2");
+
+if (musicaFinal && musicaFinal2) {
+  musicaFinal.addEventListener("ended", () => {
+    musicaFinal2.volume = 0;
+    musicaFinal2.play();
+
+    let volume = 0;
+
+    const fadeInFinal2 = setInterval(() => {
+      volume += 0.04;
+      musicaFinal2.volume = Math.min(volume, 0.75);
+
+      if (volume >= 0.75) {
+        clearInterval(fadeInFinal2);
+      }
+    }, 200);
+  });
+}
